@@ -1,0 +1,54 @@
+interface Shape {
+    void printArea(); // Interface method to calculate area
+}
+
+class Rectangle implements Shape {
+    int x, y; // Length and breadth
+
+    @Override
+    public void printArea() {
+        System.out.println("Area of Rectangle is " + (x * y));
+    }
+}
+
+class Triangle implements Shape {
+    int x, y; // Base and height
+
+    @Override
+    public void printArea() {
+        System.out.println("Area of Triangle is " + (x * y) / 2);
+    }
+}
+
+class Circle implements Shape {
+    int x; // Radius
+
+    @Override
+    public void printArea() {
+        System.out.println("Area of Circle is " + (22 * x * x) / 7);
+    }
+}
+
+public class Inter_Shape {
+    public static void main(String[] args) {
+        // Rectangle instance
+        Rectangle r = new Rectangle();
+        r.x = 10; // Length
+        r.y = 20; // Breadth
+        r.printArea();
+        System.out.println("------------------------");
+
+        // Triangle instance
+        Triangle t = new Triangle();
+        t.x = 30; // Base
+        t.y = 35; // Height
+        t.printArea();
+        System.out.println("------------------------");
+
+        // Circle instance
+        Circle c = new Circle();
+        c.x = 2; // Radius
+        c.printArea();
+        System.out.println("------------------------");
+    }
+}
