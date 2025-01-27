@@ -1,15 +1,15 @@
 import java.util.Scanner;
 
-// Custom Exception for handling negative amounts
+
 class NegativeAmtException extends Exception {
     String msg;
 
-    // Constructor to initialize the exception message
+
     NegativeAmtException(String msg) {
         this.msg = msg;
     }
 
-    // Overriding the toString() method to return the custom message
+
     @Override
     public String toString() {
         return msg;
@@ -21,19 +21,19 @@ public class UserDefined {
         Scanner s = new Scanner(System.in);
 
         System.out.print("Enter Amount: ");
-        int a = s.nextInt(); // Input amount
+        int a = s.nextInt(); 
 
         try {
-            // Check if the amount is negative
+
             if (a < 0) {
                 throw new NegativeAmtException("Invalid Amount: Negative amounts are not allowed.");
             }
             System.out.println("Amount Deposited Successfully");
         } catch (NegativeAmtException e) {
-            // Handling the custom exception
+
             System.out.println(e);
         } finally {
-            // Closing the scanner to release resources
+
             s.close();
         }
     }
