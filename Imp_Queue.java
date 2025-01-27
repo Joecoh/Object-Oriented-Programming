@@ -69,7 +69,7 @@ class QueueADT {
     }
 }
 
-public class Queue_Main {
+public class Imp_Queue{
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Queue Test\n");
