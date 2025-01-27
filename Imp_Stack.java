@@ -59,7 +59,7 @@ class StackADT {
     }
 }
 
-public class Stack {
+public class Imp_Stack{
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Stack Test\n");
